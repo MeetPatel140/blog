@@ -1,0 +1,7 @@
+Title: <%= @article.title %><br/>
+Description: <%= @article.description %><br/><br/>
+
+<%= link_to "Destroy", article_path(@article), data:{
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+} %>

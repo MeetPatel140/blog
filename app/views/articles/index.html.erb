@@ -1,0 +1,6 @@
+<% @articles.each.with_index do |value| %>
+<h1><%= value.id %>: <%= link_to value.title, article_path(value.id) %></h1>
+<h1><%= value.description %></h1>
+<br/>
+<br/>
+<% end %>

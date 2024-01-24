@@ -1,7 +1,11 @@
-Title: <%= @article.title %><br/>
-Description: <%= @article.description %><br/><br/>
-
-<%= link_to "Destroy", article_path(@article), data:{
-    turbo_method: :delete,
-    turbo_confirm: "Are you sure?"
-} %>
+<header class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="/articles" class="nav-link" aria-current="page">All Articles</a></li>
+      <li class="nav-item"><a href="/articles/new" class="nav-link">New Article</a></li>
+    </ul>
+  </header>
+  
+  <div class="container" id="main-container">
+    <h1 align="center"><%= @article.title %></h1>
+    <p><%= simple_format(@article.description) %></p>
+  </div>
